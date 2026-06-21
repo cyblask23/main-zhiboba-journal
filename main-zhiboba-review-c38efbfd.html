@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>直播吧 · 清晰之选</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f0f2f4;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1e1f22;
+      line-height: 1.6;
+      padding: 2.4rem 1.2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .page {
+      max-width: 780px;
+      width: 100%;
+    }
+
+    /* 卡片通用 */
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 2.2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      transition: box-shadow 0.2s ease;
+    }
+    .card:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    /* 开场区 */
+    .hero-tag {
+      display: inline-block;
+      background: #eaeef3;
+      color: #3a4a5c;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      padding: 0.25rem 1rem;
+      border-radius: 40px;
+      margin-bottom: 1.2rem;
+      border: 1px solid #d5dce4;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #121314;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+    .opening {
+      font-size: 1.1rem;
+      color: #2b3038;
+      max-width: 600px;
+    }
+
+    /* 承接段落 */
+    .context p {
+      margin-bottom: 1.1rem;
+    }
+    .context p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 特点列表 */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 0.8rem;
+    }
+    .feature-item {
+      background: #f8fafb;
+      border-radius: 16px;
+      padding: 1rem 1.3rem;
+      flex: 1 1 180px;
+      border: 1px solid #e2e7ec;
+      transition: background 0.15s;
+    }
+    .feature-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: #1a2632;
+    }
+    .feature-item p {
+      font-size: 0.9rem;
+      color: #3f4a58;
+    }
+
+    /* 温和结尾 */
+    .closing {
+      background: #f6f9fd;
+      border: 1px solid #dce2ea;
+      border-radius: 20px;
+      padding: 1.6rem 2rem;
+      margin-top: 1.2rem;
+    }
+    .closing p {
+      font-size: 0.98rem;
+      color: #2d3846;
+    }
+
+    /* 链接样式 */
+    a {
+      color: #215a8e;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.1s, color 0.1s;
+    }
+    a:hover {
+      border-bottom-color: #215a8e;
+      color: #0e3d63;
+    }
+
+    /* 小字号 & 分隔 */
+    .footnote {
+      font-size: 0.85rem;
+      color: #6c7a8a;
+      margin-top: 0.4rem;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid #dce0e6;
+      margin: 1.5rem 0 1rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 550px) {
+      body {
+        padding: 1.5rem 0.8rem;
+      }
+      .card {
+        padding: 1.5rem 1.2rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .feature-item {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- 开场短句 -->
+    <div class="card">
+      <span class="hero-tag">📌 从名字开始</span>
+      <h1>一个网站，只做一件事</h1>
+      <div class="opening">
+        当你看到「直播吧」这三个字，大概已经猜到它和什么有关。<br>
+        体育直播、赛事信息、即时比分 —— 这里没有冗余的干扰，只有你想关注的那场比赛。
+      </div>
+    </div>
+
+    <!-- 承接段落：从用户角度出发 -->
+    <div class="card context">
+      <p>
+        很多人第一次打开一个直播网站，总要花时间找“到底在哪看” —— 菜单、弹窗、推荐流，层层叠叠。<br>
+        <a href="https://main-zhiboba.com">直播吧</a> 的页面设计更接近一个工具箱：左侧是比赛列表，中间是实时画面，右侧是数据或聊天。一眼就能定位自己需要的板块。
+      </p>
+      <p>
+        对于习惯一边看比赛一边刷社区讨论的人来说，这种分区方式降低了认知负担。不需要反复切换标签页，也不用在评论区里艰难地翻找比分。
+      </p>
+    </div>
+
+    <!-- 特点列表：卡片化 -->
+    <div class="card">
+      <h2 style="font-weight: 500; font-size: 1.2rem; margin-bottom: 0.6rem; color: #1f2a36;">常见的使用场景</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <h3>⏱ 即时比分</h3>
+          <p>足球、篮球、网球等主流赛事，刷新速度接近实时，不用一直盯着进度条。</p>
+        </div>
+        <div class="feature-item">
+          <h3>📋 赛程一览</h3>
+          <p>今日、明日、本周的赛事安排，按联赛或时间排序，方便提前规划观看。</p>
+        </div>
+        <div class="feature-item">
+          <h3>💬 边看边聊</h3>
+          <p>部分直播间配有文字讨论区，可以快速了解其他观众的实时观点。</p>
+        </div>
+        <div class="feature-item">
+          <h3>📱 移动友好</h3>
+          <p>手机浏览器直接打开即可，无需额外下载应用，布局会自适应屏幕。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 摘要 / 温和补充 -->
+    <div class="card" style="padding-bottom: 1.4rem;">
+      <h2 style="font-weight: 500; font-size: 1.1rem; margin-bottom: 0.6rem; color: #1f2a36;">你可能想知道</h2>
+      <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+        <div style="background: #f8fafb; border-radius: 12px; padding: 0.7rem 1.2rem; border: 1px solid #e8edf2;">
+          <strong style="display: block; font-weight: 500; font-size: 0.95rem;">需要注册才能看吗？</strong>
+          <span style="font-size: 0.9rem; color: #3a4859;">大部分直播页面可以直接观看，部分功能（如发言）可能需要简单登录。</span>
+        </div>
+        <div style="background: #f8fafb; border-radius: 12px; padding: 0.7rem 1.2rem; border: 1px solid #e8edf2;">
+          <strong style="display: block; font-weight: 500; font-size: 0.95rem;">直播源稳定吗？</strong>
+          <span style="font-size: 0.9rem; color: #3a4859;">网站聚合了多个信号源，通常会有备用线路，遇到卡顿可以切换。</span>
+        </div>
+        <div style="background: #f8fafb; border-radius: 12px; padding: 0.7rem 1.2rem; border: 1px solid #e8edf2;">
+          <strong style="display: block; font-weight: 500; font-size: 0.95rem;">手机上体验如何？</strong>
+          <span style="font-size: 0.9rem; color: #3a4859;">竖屏模式下比分和画面分区显示，横屏则获得更沉浸的观看区域。</span>
+        </div>
+      </div>
+      <div class="footnote" style="margin-top: 1.2rem;">
+        以上信息基于日常使用观察，具体功能以 <a href="https://main-zhiboba.com">直播吧</a> 实际页面为准。
+      </div>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="closing">
+      <p>
+        如果你只是想快速找到一场比赛的直播入口，或者想看看不同赛事的实时战况，<a href="https://main-zhiboba.com">直播吧</a> 是一个直接的选择。<br>
+        没有复杂的个人推荐算法，也没有夹带大量无关内容 —— 它更像一个体育直播的目录，把你带到想看的画面前面。
+      </p>
+      <p style="margin-top: 0.8rem; font-size: 0.92rem; color: #4b5a6b;">
+        下次想看比赛时，或许可以把它当作起点。
+      </p>
+    </div>
+
+    <!-- 极简装饰行 -->
+    <div style="text-align: center; margin-top: 2.8rem; font-size: 0.75rem; color: #8e9aa8; border-top: 1px solid #dce0e6; padding-top: 1.2rem;">
+      <span>基于真实使用体验整理</span>
+    </div>
+  </div>
+</body>
+</html>
