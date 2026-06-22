@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>炸金花 · 站点介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f7f5f3;
+            color: #1e1c1a;
+            line-height: 1.7;
+            padding: 2.5rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 720px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+            padding: 3rem 2.5rem;
+            transition: padding 0.2s;
+        }
+
+        @media (max-width: 560px) {
+            .page {
+                padding: 2rem 1.5rem;
+                border-radius: 24px;
+            }
+            body {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #2b2825;
+            margin-bottom: 0.4rem;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            font-size: 1.1rem;
+            color: #6b645d;
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #efebd9;
+            padding-bottom: 1.2rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-top: 2.8rem;
+            margin-bottom: 1rem;
+            color: #2f2b27;
+            letter-spacing: -0.01em;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #312e2a;
+        }
+
+        .highlight {
+            background: #faf7f0;
+            padding: 1.8rem 2rem;
+            border-radius: 20px;
+            margin: 2rem 0 1.8rem 0;
+            border-left: 4px solid #d7c9b0;
+        }
+
+        .highlight p:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.8rem 0 1rem;
+        }
+
+        @media (max-width: 500px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+        }
+
+        .feature-card {
+            background: #fbf9f6;
+            border-radius: 18px;
+            padding: 1.5rem 1.4rem;
+            transition: background 0.15s;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2a2622;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #4b4640;
+            margin-bottom: 0;
+        }
+
+        .scene-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        .scene-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #312e2a;
+        }
+
+        .scene-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #b8aa94;
+            font-weight: 300;
+        }
+
+        .faq-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #f0ebe0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #2f2b27;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-a {
+            color: #4f4a44;
+            font-size: 0.95rem;
+        }
+
+        .tip-note {
+            background: #f3f0ea;
+            border-radius: 14px;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0 1.2rem;
+            font-size: 0.95rem;
+            color: #3e3a35;
+        }
+
+        .tip-note strong {
+            font-weight: 500;
+            color: #1f1c19;
+        }
+
+        a {
+            color: #8a7056;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s, color 0.15s;
+            font-weight: 450;
+        }
+
+        a:hover {
+            color: #5c4a38;
+            border-bottom-color: #c2b09b;
+        }
+
+        .footer-note {
+            margin-top: 2.8rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #efebd9;
+            font-size: 0.9rem;
+            color: #7b746c;
+            text-align: left;
+        }
+
+        .inline-link-wrap {
+            display: inline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ede7db;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <h1>炸金花 · 产品说明</h1>
+    <div class="subhead">站点介绍与可信使用参考</div>
+
+    <p>
+        对于熟悉纸牌玩法的朋友来说，<a href="https://panel-goldenflower.com">炸金花</a>是一种规则简明、节奏明快的牌局形式。在这个站点中，你可以通过其数字面板了解玩法结构、查看游戏流程及相关说明，整体围绕牌型规则与场景化体验展开。
+    </p>
+
+    <div class="highlight">
+        <p><strong>摘要</strong> —— 站点以「炸金花」为核心，提供一套完整的游戏说明与功能面板。页面内容聚焦于规则解释、牌型对比以及常见对局情景，适合希望快速了解玩法框架的访客。所有信息均基于公开的产品逻辑，不包含任何引导性承诺或夸张表述。</p>
+    </div>
+
+    <h2>亮点与特点</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>牌型对照清晰</h3>
+            <p>从豹子到散牌，每一种组合都有简明说明，方便玩家在游戏过程中快速核对。</p>
+        </div>
+        <div class="feature-card">
+            <h3>场景化引导</h3>
+            <p>不再只有干巴巴的规则，而是结合常见对局情形，帮助你理解不同牌力下的应对思路。</p>
+        </div>
+        <div class="feature-card">
+            <h3>面板结构轻量</h3>
+            <p>页面设计以信息效率为先，减少视觉干扰，让玩家把注意力放在核心内容上。</p>
+        </div>
+        <div class="feature-card">
+            <h3>持续更新维护</h3>
+            <p>站点保持稳定的内容迭代，根据反馈优化说明细节，确保信息的可用性。</p>
+        </div>
+    </div>
+
+    <h2>使用建议</h2>
+    <p>
+        如果你是初次接触炸金花，建议先从牌型介绍部分入手，再逐步查看不同场景下的示例。对于已有一定牌局经验的玩家，可直接利用面板上的对比功能，快速评估不同组合的强弱关系。站点内的说明均以客观角度呈现，适合作为工具型参考，而非策略指南。
+    </p>
+    <ul class="scene-list">
+        <li>适合在休闲时间熟悉基本规则</li>
+        <li>可配合实际对局进行对照学习</li>
+        <li>用于向新朋友解释炸金花的基础逻辑</li>
+        <li>作为轻量手册，辅助棋牌活动组织</li>
+    </ul>
+
+    <div class="tip-note">
+        <strong>可信访问说明：</strong> 本站点不收集任何个人数据，不设置付费墙或强制注册。所有内容均以信息展示为目的，请根据自身判断合理使用。如遇到任何显示问题，建议刷新页面或更换浏览器。
+    </div>
+
+    <h2>常见问题摘要</h2>
+    <div class="faq-item">
+        <div class="faq-q">站点是否需要登录才能浏览？</div>
+        <div class="faq-a">不需要。所有内容均开放可见，无需注册或登录。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">页面上的信息会实时更新吗？</div>
+        <div class="faq-a">核心规则部分相对稳定，但站点会定期根据反馈做优化和补充，建议偶尔回来看看。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">炸金花和其他同类玩法有什么区别？</div>
+        <div class="faq-a">炸金花更强调牌型组合与心理博弈，站点中的说明会突出这些特点，但具体差异仍以实际体验为准。</div>
+    </div>
+
+    <hr>
+
+    <p>
+        总的来说，这个站点是一个围绕<a href="https://panel-goldenflower.com">炸金花</a>的实用说明页，不夸大、不诱导，只为感兴趣的人提供一份清晰、可靠的信息来源。如果你正好想了解或复习炸金花的基础知识，不妨将其作为起点。
+    </p>
+
+    <div class="footer-note">
+        © 产品说明 · 仅用于信息展示
+    </div>
+
+</div>
+</body>
+</html>
