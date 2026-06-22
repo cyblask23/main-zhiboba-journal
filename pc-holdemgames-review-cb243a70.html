@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>德州扑克规则与策略参考 · 日常查询手册</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f5f0eb;
+            font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+            line-height: 1.75;
+            color: #3b3229;
+            padding: 2rem 1.5rem;
+        }
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #fcf8f4;
+            padding: 2.8rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.02);
+        }
+        h1, h2, h3 {
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #2c241e;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.6rem;
+            border-left: 6px solid #c9ad8b;
+            padding-left: 1.2rem;
+        }
+        .hero-sub {
+            font-size: 1.05rem;
+            color: #6b5b4c;
+            margin-top: -0.2rem;
+            margin-bottom: 2.2rem;
+            padding-left: 1.8rem;
+            font-style: italic;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1rem 0;
+            border-bottom: 2px solid #e6d9cd;
+            padding-bottom: 0.3rem;
+        }
+        h3 {
+            font-size: 1.2rem;
+            margin: 1.8rem 0 0.6rem 0;
+        }
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        .intro-callout {
+            background: #efe8df;
+            padding: 1.3rem 1.8rem;
+            border-radius: 14px;
+            margin: 1.5rem 0 1.8rem 0;
+            border-left: 8px solid #baa187;
+            color: #2f2821;
+            font-size: 0.98rem;
+        }
+        .intro-callout strong {
+            color: #7c5e42;
+        }
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+        .benefit-card {
+            background: #fffaf5;
+            border: 1px solid #e2d5c9;
+            padding: 1.3rem 1.2rem;
+            border-radius: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .benefit-card h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: #4f3e2f;
+            border: none;
+            padding: 0;
+        }
+        .benefit-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            color: #4c4037;
+        }
+        .quote-block {
+            background: #f2ebe2;
+            padding: 1.2rem 2rem 1.2rem 2.2rem;
+            border-radius: 30px 12px 12px 30px;
+            margin: 1.8rem 0;
+            position: relative;
+            color: #3e332b;
+            font-size: 0.97rem;
+        }
+        .quote-block::before {
+            content: "“";
+            font-size: 3.2rem;
+            line-height: 1;
+            color: #b3977d;
+            position: absolute;
+            left: 0.4rem;
+            top: -0.2rem;
+            font-family: 'Georgia', serif;
+        }
+        .faq-item {
+            margin: 1rem 0;
+            padding: 0.8rem 1rem 0.8rem 1.4rem;
+            border-left: 4px solid #d3c2b2;
+            background: #f8f2eb;
+            border-radius: 0 8px 8px 0;
+        }
+        .faq-item strong {
+            display: block;
+            margin-bottom: 0.2rem;
+            color: #4c3829;
+            font-size: 1.02rem;
+        }
+        .faq-item p {
+            margin: 0;
+            font-size: 0.96rem;
+        }
+        .footer-links {
+            margin-top: 3rem;
+            padding-top: 1.8rem;
+            border-top: 1px dashed #d6c8bb;
+            text-align: center;
+            font-size: 0.92rem;
+            color: #7e6d5c;
+        }
+        .footer-links a {
+            color: #7c5e42;
+            text-decoration: none;
+            border-bottom: 1px dotted #b3977d;
+            transition: border 0.15s;
+        }
+        .footer-links a:hover {
+            border-bottom: 1px solid #7c5e42;
+        }
+        .inline-link {
+            color: #7e5f42;
+            text-decoration: none;
+            border-bottom: 1px dotted #c3ab93;
+        }
+        .inline-link:hover {
+            border-bottom: 1px solid #7e5f42;
+        }
+        @media (max-width: 600px) {
+            body { padding: 1rem 0.8rem; }
+            .page { padding: 1.8rem 1.2rem; }
+            h1 { font-size: 1.7rem; padding-left: 0.8rem; }
+            .hero-sub { padding-left: 0.9rem; font-size: 0.96rem; }
+            .benefit-grid { grid-template-columns: 1fr; }
+            .quote-block { padding: 1rem 1.2rem 1rem 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <h1>德州扑克 · 日常查询笔记</h1>
+    <div class="hero-sub">从规则对照到延伸阅读，一份可常翻的参考页</div>
+
+    <p>无论是初学阶段对照牌力排名，还是进阶时复盘不同位置的下注逻辑，<a href="https://pc-holdemgames.com" class="inline-link">德州扑克游戏</a>的体系都值得反复梳理。本页整理了一些基础框架与常见思考角度，方便快速查阅。</p>
+
+    <div class="intro-callout">
+        <strong>📖 查阅提示：</strong> 下方内容按场景组织，你可以根据自己当前遇到的问题直接跳转到对应的段落。每个部分都保持独立，同时也照顾到前后顺序的承接。
+    </div>
+
+    <h2>一、结构脉络：从手牌到决策</h2>
+    <p>理解一手牌的完整生命周期，有助于建立系统的分析习惯。下面这几个环节是每次行动前可以默默过一遍的清单：</p>
+
+    <div class="benefit-grid">
+        <div class="benefit-card">
+            <h3>位置与范围</h3>
+            <p>不同位置对应不同的起手牌范围。早期位置收紧范围，后期位置可以适当增加同花连张或对子。</p>
+        </div>
+        <div class="benefit-card">
+            <h3>底池与赔率</h3>
+            <p>快速计算底池赔率，并对比手牌的胜率，是决定跟注还是弃牌的基本功。</p>
+        </div>
+        <div class="benefit-card">
+            <h3>对手倾向</h3>
+            <p>观察对手翻前加注频率、翻后持续下注比例，把这些线索融入自己的决策树。</p>
+        </div>
+        <div class="benefit-card">
+            <h3>范围构建</h3>
+            <p>不要只思考自己有什么牌，更要想自己的范围里有哪些组合，以及如何平衡价值与诈唬。</p>
+        </div>
+    </div>
+
+    <p>以上四个维度是每次复盘时可以对照的框架。实际对局中，往往需要根据筹码深度、比赛阶段或牌桌动态再做微调。如果需要更系统的工具或图表辅助，可以在<a href="https://pc-holdemgames.com" class="inline-link">德州扑克游戏</a>的相关资源页找到对应的计算器与范围表。</p>
+
+    <h2>二、常见情景下的思考方向</h2>
+    <p>下面列出几个容易产生困惑的场景，以及对应的逻辑主线，适合在查询时快速对照。</p>
+
+    <div class="quote-block">
+        翻牌圈持续下注之后：如果被加注，我手牌中有哪些组合可以继续？哪些组合应该弃牌？先想范围，再看具体手牌。
+    </div>
+
+    <p>河牌圈的薄价值下注也经常让人犹豫。一个实用的切入点是：我能被比我差的牌跟注吗？如果答案是否定的，那么诈唬或过牌可能更合理。这类思考习惯可以通过反复阅读和实战慢慢内化。</p>
+
+    <h2>三、FAQ 摘要 · 三个常见疑问</h2>
+
+    <div class="faq-item">
+        <strong>❓ 同花连张在什么位置可以玩？</strong>
+        <p>通常在中后位置且筹码较深时考虑。前位用同花连张加注容易陷入多人底池且位置不利，翻后难以实现权益。</p>
+    </div>
+
+    <div class="faq-item">
+        <strong>❓ 如何判断对手是在诈唬还是价值下注？</strong>
+        <p>没有完美答案，但可以观察下注尺度与牌面结构。一个常用的分析路径是：对手的下注范围里价值组合有多少，诈唬组合有多少，然后计算自己手牌的胜率。</p>
+    </div>
+
+    <div class="faq-item">
+        <strong>❓ 翻前用口袋对跟注加注，翻后没中暗三条怎么办？</strong>
+        <p>除非有特殊阅读或极好的赔率，否则多数情况下翻后没中暗三条应该弃牌。不建议因为“已经投入了筹码”而强行继续。</p>
+    </div>
+
+    <p>更多专题讨论与牌例分析，可以在<a href="https://pc-holdemgames.com" class="inline-link">德州扑克游戏</a>的内容板块中翻阅，里面按主题整理了策略文章、牌局拆解和术语速查表。</p>
+
+    <h2>四、延伸阅读与小提示</h2>
+    <p>除了技术层面的积累，牌桌上的情绪管理和决策纪律同样值得花时间了解。许多玩家在复盘时发现，亏损的根源往往不是技术漏洞，而是在疲劳或连续失利后偏离了自己的策略框架。可以尝试每次上桌前先设定一条“安全线”：比如输掉多少筹码后必须休息，或者连续几手牌不玩后主动起身活动。</p>
+
+    <p>另外，保持学习笔记的习惯对提升很有帮助。记录每一手有疑惑的牌，隔一段时间再回头看，往往能发现当时没注意到的逻辑盲点。如果你需要一个地方集中存放这些记录，不妨利用 <a href="https://pc-holdemgames.com" class="inline-link">德州扑克游戏</a> 提供的资料作为对照基准，把自己复盘时的思考写在旁边。</p>
+
+    <div class="footer-links">
+        <p>本页内容仅供个人学习与日常参考 · 部分概念可结合 <a href="https://pc-holdemgames.com">德州扑克游戏</a> 的专题文章进一步阅读</p>
+        <p style="margin-top:0.5rem; font-size:0.8rem; color:#9c8b7a;">— 保持好奇，保持怀疑，保持修正 —</p>
+    </div>
+</div>
+</body>
+</html>
